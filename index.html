@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CalcProb</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>CalcProb</h1>
+    <p>Calculadora de Distribuições - Uniforme e Exponencial</p>
+  </header>
+
+  <main>
+    <section class="box">
+      <h2>Distribuição Uniforme</h2>
+      <label for="a">Valor de a:</label>
+      <input type="number" id="a" step="any">
+      
+      <label for="b">Valor de b:</label>
+      <input type="number" id="b" step="any">
+
+      <label for="x1">Valor de x1:</label>
+      <input type="number" id="x1" step="any">
+
+      <label for="x2">Valor de x2:</label>
+      <input type="number" id="x2" step="any">
+
+      <button onclick="calcularUniforme()">Calcular</button>
+      <div id="resultadoUniforme" class="resultado"></div>
+    </section>
+
+    <section class="box">
+      <h2>Distribuição Exponencial</h2>
+      <label for="lambda">Valor de λ (lambda):</label>
+      <input type="number" id="lambda" step="any">
+
+      <label for="x_exp">Valor de x:</label>
+      <input type="number" id="x_exp" step="any">
+
+      <select id="tipoExp">
+        <option value="menor">P(X ≤ x)</option>
+        <option value="maior">P(X > x)</option>
+      </select>
+
+      <button onclick="calcularExponencial()">Calcular</button>
+      <div id="resultadoExponencial" class="resultado"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CalcProb — Desenvolvido por Jonas Santos e Pedro Adorno</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
